@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const PREFIX = "?"
-const TOKEN = "NjA0ODM1MzYyNTIyNzkxOTQ2.XT9M-A._rynJN7nIGwPM__h5B1ZDFXoBm8"
+const TOKEN = "NjA0ODM1MzYyNTIyNzkxOTQ2.XT9NTQ.QILFoDa8gVPzWEvVvQYkTH5lgCY"
 //const YTDL = require("ytdl-core");
 
 var client = new Discord.Client();
