@@ -52,12 +52,15 @@ client.on('message', message => {
     case "skip":
       var server = servers[message.guild.id];
       if(server.dispatcher) server.dispatcher.end();
+      botch.send("@" + message.member.id.toString() + ": Skipped.");
       break;
     case "stop":
       var server = servers[message.guild.id];
       if(message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
+      botch.send("@" + message.member.id.toString() + ": Stopped.");
       break;
     default:
+      botch.send("@" + message.member.id.toString() + ": Invalid command, type !help for a list of commands.");
   }
 
 });
