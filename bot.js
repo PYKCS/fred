@@ -6,7 +6,14 @@ var client = new Discord.Client();
 var servers = {};
 
 client.on('ready', () => {
-  client.user.setActivity('https://www.pornhub.com/view_video.php?viewkey=ph588434b815de9', {type: 'WATCHING'});
+  bot.user.setStatus('available');
+  bot.user.setPresence({
+        game: {
+            name: 'porn',
+            type: "WATCHING",
+            url: "https://www.pornhub.com/view_video.php?viewkey=ph588434b815de9"
+        }
+    });
   console.log('I am ready!');
 });
 
