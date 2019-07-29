@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const PREFIX = "!"
-const YTDL = require("ytdl-core");
+//const YTDL = require("ytdl-core");
 
 var servers = {};
 
-function play(connection, message){
+/*function play(connection, message){
   var server = servers[message.guild.id];
   server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: "audioonly"}));
   server.queue.shift();
@@ -13,7 +13,7 @@ function play(connection, message){
     if (server.queue[0]) play(connection, message)
     else connection.disconnect();
   });
-}
+}*/
 
 client.on('ready', () => {
   console.log('I am ready!');
