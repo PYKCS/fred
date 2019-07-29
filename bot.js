@@ -31,7 +31,10 @@ client.on('message', message => {
   var botch = message.channel.find("ch", "bot");
 
   switch(args[0].toLowerCase()){
-    case "play":
+    case "ping":
+      botch.send("@" + message.member.id.toString() + ": Pong.");
+      break;
+    /*case "play":
       if(!args[1]){
         botch.send("@" + message.member.id.toString() + ": You must provide a link.");
         return;
@@ -58,7 +61,7 @@ client.on('message', message => {
       var server = servers[message.guild.id];
       if(message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
       botch.send("@" + message.member.id.toString() + ": Stopped.");
-      break;
+      break;*/
     default:
       botch.send("@" + message.member.id.toString() + ": Invalid command, type !help for a list of commands.");
   }
