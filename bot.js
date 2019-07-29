@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 const PREFIX = "?"
-const TOKEN = "NjA0ODM1MzYyNTIyNzkxOTQ2.XT9NTQ.QILFoDa8gVPzWEvVvQYkTH5lgCY"
 //const YTDL = require("ytdl-core");
 
 var client = new Discord.Client();
 var servers = {};
 
 client.on('ready', () => {
+  client.user.setActivity('https://git.io/d.js-heroku', {type: 'WATCHING'});
   console.log('I am ready!');
 });
 
@@ -40,4 +40,4 @@ client.on('message', async message => {
   }
 });
 
-client.login(TOKEN);
+client.login(process.env.TOKEN);
