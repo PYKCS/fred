@@ -4,7 +4,7 @@ const PREFIX = '?'
 const YTDL = require("ytdl-core");
 
 //---------------------------------------------------- SONG QUEUE FUNCTION ------------------------------------------------------------------------\\
-function play(connection, message){
+/*function play(connection, message){
   var server = servers[message.guild.id];
 
   server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: "audioonly"}));
@@ -15,7 +15,7 @@ function play(connection, message){
     if(server.queue[0]) play(connection, message);
     else connection.disconnect();
   });
-}
+}*/
 
 var bot = new Discord.Client();
 
@@ -25,12 +25,12 @@ bot.on('ready', () => {
   console.log('Hey, its Fred!');
 })
 
-bot.on('guildMemberAdd', member => {
+/*bot.on('guildMemberAdd', member => {
   member.addRole(member.guild.roles.find(name => name.name === 'EMen'));
   const channel = member.guild.channels.find(ch => ch.name === 'log');
   if(!channel) return;
   channel.send(`Welcome to the server, ${member}`);
-})
+})*/
 
 bot.on('message', message => {
   if (message.author.bot) return;
@@ -60,7 +60,7 @@ bot.on('message', message => {
     case "ping":
       botchat.send("```\nPong!\n```");
       break;
-    case "play":
+    /*case "play":
       if (!args[1]){
         botchat.send("```\nPlease provide a link for me to play.\n```");
         return;
@@ -94,7 +94,7 @@ bot.on('message', message => {
       var server = servers[message.guild.id];
       if(message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
       botchat.send("```\nStopped.\n```");
-      break;
+      break;*/
     default:
       botchat.send("```\nInvalid command, type ?help to see a list of commands.\n```");
   }
