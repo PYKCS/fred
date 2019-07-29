@@ -7,10 +7,17 @@
 		"start": "node bot.js"
 	},
 	"dependencies": {
+		"better-sqlite3": "^5.4.0",
 		"bufferutil": "^4.0.1",
+		"chalk": "^2.4.2",
 		"discord.js": "^11.5.1",
+		"enmap": "^5.1.0",
 		"ffmpeg-static": "^2.5.0",
+		"fs": "0.0.1-security",
+		"inquirer": "^6.3.1",
 		"libsodium-wrappers": "^0.7.5",
+		"moment": "^2.24.0",
+		"moment-duration-format": "^2.3.2",
 		"node-opus": "^0.3.2",
 		"opusscript": "0.0.6",
 		"request": "2.81.0"
