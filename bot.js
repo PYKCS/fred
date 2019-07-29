@@ -6,7 +6,7 @@ var client = new Discord.Client();
 var servers = {};
 
 client.on('ready', () => {
-  client.user.setActivity('porn', {type: 'WATCHING'});
+  client.user.setActivity('porn', 'https://www.pornhub.com/view_video.php?viewkey=ph588434b815de9', {type: 'WATCHING'});
   console.log('I am ready!');
 });
 
@@ -36,7 +36,7 @@ client.on('message', async message => {
       m.edit(`${message.author} Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
       break;
     default:
-      botch.send(`${message.author} - Invalid command, check ?help for the commands.`);
+      botch.send(`${message.author} - Invalid command (${message}), check ?help for the commands.`);
   }
 });
 
