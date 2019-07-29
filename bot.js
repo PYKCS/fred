@@ -6,13 +6,7 @@ var client = new Discord.Client();
 var servers = {};
 
 client.on('ready', () => {
-  bot.user.setPresence({
-        game: {
-            name: 'porn',
-            type: "WATCHING",
-            url: "https://www.pornhub.com/view_video.php?viewkey=ph588434b815de9"
-        }
-    });
+  bot.user.setActivity('Porn', {type: 'WATCHING'});
   console.log('I am ready!');
 });
 
