@@ -5,6 +5,8 @@ const PREFIX = "!"
 
 var servers = {};
 
+var botch = bot.channels.find(name => name === "bot");
+
 /*function play(connection, message){
   var server = servers[message.guild.id];
   server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: "audioonly"}));
@@ -19,20 +21,19 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 
-client.on('guildMemberAdd', member => {
+/*client.on('guildMemberAdd', member => {
   member.addRole(member.guild.roles.find("name", "EMen"));
   member.guild.channel.find("ch", "bot").send("```\nSet role of @" + member.id.toString() + " to " + member.guild.roles.find("name", "EMen").toString() + "\n```");
-})
+})*/
 
 client.on('message', message => {
   if(message.author.equals(bot.user)) return;
   if(!message.content.startsWith(PREFIX)) return;
   var args = message.content.substring(PREFIX.length).split(" ");
-  var botch = message.channel.find("ch", "bot");
 
   switch(args[0].toLowerCase()){
     case "ping":
-      botch.send("@" + message.member.id.toString() + ": Pong.");
+      botch.send("Pong.");
       break;
     /*case "play":
       if(!args[1]){
@@ -63,7 +64,7 @@ client.on('message', message => {
       botch.send("@" + message.member.id.toString() + ": Stopped.");
       break;*/
     default:
-      botch.send("@" + message.member.id.toString() + ": Invalid command, type !help for a list of commands.");
+      botch.send("Invalid command, type !help for a list of commands.");
   }
 
 });
