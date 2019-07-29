@@ -6,7 +6,6 @@ var client = new Discord.Client();
 var servers = {};
 
 client.on('ready', () => {
-  bot.user.setActivity('Porn', {type: 'WATCHING'});
   console.log('I am ready!');
 });
 
