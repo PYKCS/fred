@@ -6,7 +6,7 @@ var client = new Discord.Client();
 var servers = {};
 
 client.on('ready', () => {
-  client.user.setActivity('https://git.io/d.js-heroku', {type: 'WATCHING'});
+  client.user.setActivity('porn', {type: 'WATCHING'});
   console.log('I am ready!');
 });
 
