@@ -31,12 +31,13 @@ client.on('message', async message => {
       botch.send(`${message.author}\n ?ping - latency test`);
       break;
     case "ping":
-      const m = await botch.send("Ping?");
-      m.edit(`${message.author} Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
+      const m = await message.channel.send("Ping?");
+      m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
       break;
     default:
-      botch.send(`${message.author} - Invalid command (${message}), check ?help for the commands.`);
+      message.channel.send(`${message.author} - Invalid command (${message}), check ?help for the commands.`);
   }
+  message.delete();
 });
 
 client.login(process.env.TOKEN);
