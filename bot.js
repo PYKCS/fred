@@ -6,6 +6,10 @@ var client = new Discord.Client();
 var servers = {};
 
 client.on('ready', () => {
+  client.user.setActivity("Porn", {
+  type: "WATCHING",
+  url: "https://www.pornhub.com/view_video.php?viewkey=ph588434b815de9"
+});
   console.log('I am ready!');
 });
 
@@ -25,6 +29,7 @@ client.on('message', async message => {
   const args = message.content.slice(PREFIX.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   const botch = message.guild.channels.find(ch => ch.name === 'bot');
+  message.delete();
 
   switch(command){
     case "help":
@@ -37,7 +42,6 @@ client.on('message', async message => {
     default:
       message.channel.send(`${message.author} - Invalid command (${message}), check ?help for the commands.`);
   }
-  message.delete();
 });
 
 client.login(process.env.TOKEN);
