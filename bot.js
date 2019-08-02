@@ -7,13 +7,6 @@ const PREFIX = "?"
 var client = new Discord.Client();
 var servers = {};
 
-client.on('ready', () => {
-  client.user.setActivity("Porn", {
-  type: "WATCHING"
-});
-  console.log('I am ready!');
-});
-
 fs.readdir("./events/", (err, files) => {
   if (err) return console.error(err);
   files.forEach(file => {
