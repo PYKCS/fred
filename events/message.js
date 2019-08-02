@@ -6,6 +6,17 @@ module.exports = (client, message) => {
   // Ignore messages not starting with the prefix (in config.json)
   if (message.content.indexOf(PREFIX) !== 0) return;
 
+  if (message.content.toLowerCase.includes("egirl" || "e-girl")) {
+    var attach = new Discord.Attachment("https://i.imgur.com/BiDmISV.png");
+    message.channel.send(message.author, attach);
+    return;
+  }
+  
+  if (message.content.toLowerCase.includes("halloween" || "spooky")) {
+    var attach = new Discord.Attachment("https://i.imgur.com/H7pbHu0.jpg");
+    message.channel.send(message.author, attach);
+    return;
+  }
   // Our standard argument/command name definition.
   const args = message.content.slice(PREFIX.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
