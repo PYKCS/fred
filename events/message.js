@@ -4,13 +4,13 @@ module.exports = (client, message) => {
   // Ignore all bots
   if (message.author.bot) return;
 
-  if (message.content.toLowerCase().includes("egirl" || "e-girl")) {
+  if (message.content.toLowerCase().includes("egirl") || message.content.toLowerCase().includes("e-girl")) {
     var attach = new Discord.Attachment("https://i.imgur.com/BiDmISV.png");
     message.channel.send(message.author, attach);
     return;
   }
 
-  if (message.content.toLowerCase().includes("halloween" || "spooky")) {
+  if (message.content.toLowerCase().includes("halloween") || message.content.toLowerCase().includes("spooky")) {
     var attach = new Discord.Attachment("https://i.imgur.com/H7pbHu0.jpg");
     message.channel.send(message.author, attach);
     return;
